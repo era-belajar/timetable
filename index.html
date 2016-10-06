@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timetable</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="http://code.angularjs.org/1.2.12/angular.js"></script>
+	<style>
+		.available {
+			background-color: #8BC34A;;
+		}
+	</style>
+</head>
+<body>
+	<div ng-app="myApp">
+		<div ng-controller="table">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Senin</th>
+						<th>Selasa</th>
+						<th>Rabu</th>
+						<th>Kamis</th>
+						<th>Jumat</th>
+						<th>Sabtu</th>
+						<th>Minggu</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="a in timestamp">
+						<th>{{a.time}}</th>
+						<td ng-repeat="b in a.days" class="{{b.status}}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		angular.module('myApp', []);
+
+		angular.module('myApp')
+			.controller('table', ['$scope', function($scope){
+				$scope.timestamp = [
+					{
+						"time": "09:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": "available"
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "10:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "11:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "12:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "13:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "14:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": "",
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "15:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "16:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "17:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "18:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": "available"
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "19:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					},
+					{
+						"time": "20:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": "available"
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}, 
+					{
+						"time": "21:00", 
+						"days": [
+							{
+								"hari": "Senin",
+								"status": ""
+							},
+							{
+								"hari": "Selasa",
+								"status": ""
+							},
+							{
+								"hari": "Rabu",
+								"status": ""
+							},
+							{
+								"hari": "Kamis",
+								"status": ""
+							},
+							{
+								"hari": "Jumat",
+								"status": ""
+							},
+							{
+								"hari": "Sabtu",
+								"status": ""
+							},
+							{
+								"hari": "Minggu",
+								"status": ""
+							}
+						]
+					}
+				];
+			}]);
+	</script>
+</body>
+</html>
